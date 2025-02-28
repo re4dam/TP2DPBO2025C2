@@ -11,6 +11,8 @@ class PetShop {
     int stokProduk;
 
   public:
+    PetShop() {}
+
     void setID(string inputID) {
         this->ID = inputID;
     }
@@ -19,11 +21,11 @@ class PetShop {
         return this->ID;
     }
 
-    void set_nama_produk(string inputNamaProduk) {
+    void setNamaProduk(string inputNamaProduk) {
         this->namaProduk = inputNamaProduk;
     }
 
-    string get_nama_produk() {
+    string getNamaProduk() {
         return this->namaProduk;
     }
 
@@ -42,4 +44,6 @@ class PetShop {
     int getStokProduk() {
         return this->stokProduk;
     }
+
+    ~PetShop() {}
 };

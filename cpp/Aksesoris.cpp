@@ -7,6 +7,8 @@ class Aksesoris : public PetShop {
     string warna;
 
   public:
+    Aksesoris() {}
+
     void setJenis(string inputJenis) {
         this->jenis = inputJenis;
     }
@@ -30,4 +32,6 @@ class Aksesoris : public PetShop {
     string getWarna() {
         return this->warna;
     }
+
+    ~Aksesoris() {}
 };
