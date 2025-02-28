@@ -69,8 +69,8 @@ int main() {
     temporary.setMerk("DoggyWear");
     vector_produk.push_back(temporary);
 
-    int num;
     int it;
+    /* int num;
     cin >> num;
 
     for (it = 0; it < num; it++) {
@@ -98,7 +98,7 @@ int main() {
         temporary.setSize(Size);
         temporary.setMerk(Merk);
         vector_produk.push_back(temporary);
-    }
+    } */
 
     vector<int> header = {2, 4, 5, 4, 5, 5, 5, 8, 4, 4};
     string panjang;
