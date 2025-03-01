@@ -7,9 +7,9 @@ class Baju extends Aksesoris
     private string $size;
     private string $merk;
 
-    function __construct(string $inputKategori, string $inputSize, string $inputMerk)
+    function __construct(string $inputID, string $inputNama, int $inputHarga, int $inputStok, string $inputGambar, string $inputJenis, string $inputBahan, string $inputWarna, string $inputKategori, string $inputSize, string $inputMerk)
     {
-        // parent::__construct($inputJenis, $inputBahan, $inputWarna)
+        parent::__construct($inputID, $inputNama, $inputHarga, $inputStok, $inputGambar, $inputJenis, $inputBahan, $inputWarna);
         $this->kategori = $inputKategori;
         $this->size = $inputSize;
         $this->merk = $inputMerk;

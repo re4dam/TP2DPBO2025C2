@@ -1,5 +1,5 @@
 <?php
-class Petshop
+class PetShop
 {
     // private attributes for the class
     private string $ID;

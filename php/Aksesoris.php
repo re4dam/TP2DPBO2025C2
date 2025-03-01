@@ -1,15 +1,15 @@
 <?php
 include "PetShop.php";
 
-class Aksesoris extends Petshop
+class Aksesoris extends PetShop
 {
     private string $jenis;
     private string $bahan;
     private string $warna;
 
-    function __construct(string $inputJenis, string $inputBahan, string $inputWarna)
+    function __construct(string $inputID, string $inputNama, int $inputHarga, int $inputStok, string $inputGambar, string $inputJenis, string $inputBahan, string $inputWarna)
     {
-        // parent::__construct(, $nama, $harga, $stok, $gambar)
+        parent::__construct($inputID, $inputNama, $inputHarga, $inputStok, $inputGambar);
         $this->jenis = $inputJenis;
         $this->bahan = $inputBahan;
         $this->warna = $inputWarna;
