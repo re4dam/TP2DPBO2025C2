@@ -4,17 +4,16 @@ include "Baju.php";
 
 // Data awal yang sudah ada
 $data = [
-    new Baju(1, 'Baju Anjing Polos', 50000, 10, '', 'Baju', 'Katun', 'Merah', 'Anjing', 'M', 'PetCo'),
-    new Baju(2, 'Baju Kucing Motif', 60000, 15, '', 'Baju', 'Sutra', 'Biru', 'Kucing', 'S', 'MeowStyle'),
-    new Baju(3, 'Jaket Anjing Waterproof', 120000, 8, '', 'Baju', 'Polyester', 'Hitam', 'Anjing', 'L', 'PetGear'),
-    new Baju(4, 'Kaos Kucing Nyaman', 45000, 20, '', 'Baju', 'Katun', 'Abu-abu', 'Kucing', 'M', 'PawFashion'),
-    new Baju(5, 'Sweater Anjing Hangat', 90000, 12, '', 'Baju', 'Wol', 'Coklat', 'Anjing', 'XL', 'DoggyWear')
+    new Baju(1, 'Baju Anjing Polos', 50000, 10, 'monyet.jpeg', 'Baju', 'Katun', 'Merah', 'Anjing', 'M', 'PetCo'),
+    new Baju(2, 'Baju Kucing Motif', 60000, 15, 'monyet.jpeg', 'Baju', 'Sutra', 'Biru', 'Kucing', 'S', 'MeowStyle'),
+    new Baju(3, 'Jaket Anjing Waterproof', 120000, 8, 'monyet.jpeg', 'Baju', 'Polyester', 'Hitam', 'Anjing', 'L', 'PetGear'),
+    new Baju(4, 'Kaos Kucing Nyaman', 45000, 20, 'monyet.jpeg', 'Baju', 'Katun', 'Abu-abu', 'Kucing', 'M', 'PawFashion'),
+    new Baju(5, 'Sweater Anjing Hangat', 90000, 12, 'monyet.jpeg', 'Baju', 'Wol', 'Coklat', 'Anjing', 'XL', 'DoggyWear')
 ];
 
 // Menambahkan 3 data baru secara statis
-$data[] = new Baju(6, 'Jaket Kucing Winter', 130000, 5, '', 'Baju', 'Wol', 'Putih', 'Kucing', 'L', 'MeowWarm');
-$data[] = new Baju(7, 'Kaos Anjing Santai', 40000, 18, '', 'Baju', 'Katun', 'Hijau', 'Anjing', 'M', 'DogRelax');
-$data[] = new Baju(8, 'Rompi Kucing Stylish', 110000, 7, '', 'Baju', 'Denim', 'Biru', 'Kucing', 'S', 'PawTrendy');
+$data[] = new Baju(6, 'Baju Motif Monyet', 150000, 5, 'monyet.jpeg', 'Baju', 'Wol', 'Pink', 'Kucing', 'XXXL', 'RadicalAnimals');
+$data[] = new Baju(7, 'Baju Love', 350000, 1, 'monyet.jpeg', 'Baju', 'Wol', 'Merah', 'Monyet', 'L', 'Love4Animals');
 
 // Fungsi untuk memformat harga ke dalam format Rupiah
 function formatRupiah($harga)
@@ -53,6 +52,7 @@ function formatRupiah($harga)
         <tr>
             <th>No</th>
             <th>ID</th>
+            <th>Gambar</th>
             <th>Nama</th>
             <th>Harga</th>
             <th>Stok</th>
@@ -66,6 +66,13 @@ function formatRupiah($harga)
             <tr>
                 <td><?= $index + 1 ?></td>
                 <td><?= $item->get_ID() ?></td>
+                <td>
+                    <?php if ($item->getGambar()): ?>
+                        <img src="<?= htmlspecialchars($item->getGambar()) ?>" width="100">
+                    <?php else: ?>
+                        Tidak Ada Gambar
+                    <?php endif; ?>
+                </td>
                 <td><?= $item->getNama() ?></td>
                 <td><?= formatRupiah($item->getHarga()) ?></td>
                 <td><?= $item->getStok() ?></td>

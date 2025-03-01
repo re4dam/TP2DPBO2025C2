@@ -68,7 +68,11 @@ Class `Baju` merupakan anak/extend dari `Aksesoris`, terdiri dari atribut tambah
 
 ## Dokumentasi
 ### C++
+![image](cpp/cpp.png)
 ### Java
+![image](java/java.png)
 ### Python
+![image](python/python.png)
 ### PHP
+![image](php/php.png)
 
