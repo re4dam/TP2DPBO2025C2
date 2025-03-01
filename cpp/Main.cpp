@@ -1,5 +1,6 @@
 #include "Baju.cpp"
 #include <iostream>
+#include <ostream>
 #include <string>
 #include <vector>
 
@@ -70,7 +71,8 @@ int main() {
     vector_produk.push_back(temporary);
 
     int it;
-    /* int num;
+    int num;
+    cout << "Masukkan jumlah data baru: ";
     cin >> num;
 
     for (it = 0; it < num; it++) {
@@ -98,7 +100,7 @@ int main() {
         temporary.setSize(Size);
         temporary.setMerk(Merk);
         vector_produk.push_back(temporary);
-    } */
+    }
 
     vector<int> header = {2, 4, 5, 4, 5, 5, 5, 8, 4, 4};
     string panjang;
@@ -139,12 +141,143 @@ int main() {
 
     // Menghitung jumlah karakter untuk membuat garis tabel
     int sum = 6;
-    for (int i = 0; i < 8; i++) {
-        sum += header[i];
+    for (it = 0; it < 10; it++) {
+        sum += header[it];
     }
 
     // Membuat garis tabel
-    for (int space = 0; space < sum + 28; space++) {
+    for (int space = 0; space < sum + 26; space++) {
+        cout << '-';
+    }
+    cout << endl;
+
+    int space;
+    cout << "| ID";
+    for (space = 0; space < header[0] - 1; space++) {
+        cout << ' ';
+    }
+    cout << "| Nama";
+    for (space = 0; space < header[1] - 3; space++) {
+        cout << ' ';
+    }
+    cout << "| Harga";
+    for (space = 0; space < header[2] - 4; space++) {
+        cout << ' ';
+    }
+    cout << "| Stok";
+    for (space = 0; space < header[3] - 3; space++) {
+        cout << ' ';
+    }
+    cout << "| Jenis";
+    for (space = 0; space < header[4] - 4; space++) {
+        cout << ' ';
+    }
+    cout << "| Bahan";
+    for (space = 0; space < header[5] - 4; space++) {
+        cout << ' ';
+    }
+    cout << "| Warna";
+    for (space = 0; space < header[6] - 4; space++) {
+        cout << ' ';
+    }
+    cout << "| Kategori";
+    for (space = 0; space < header[7] - 7; space++) {
+        cout << ' ';
+    }
+    cout << "| Size";
+    for (space = 0; space < header[8] - 3; space++) {
+        cout << ' ';
+    }
+    cout << "| Merk";
+    for (space = 0; space < header[9] - 3; space++) {
+        cout << ' ';
+    }
+    cout << " |" << endl;
+
+    // Membuat garis tabel
+    for (int space = 0; space < sum + 26; space++) {
+        cout << '-';
+    }
+    cout << endl;
+
+    for (it = 0; it < vector_produk.size(); it++) {
+        // ID
+        cout << "| ";
+        cout << vector_produk[it].getID();
+        for (space = 0; space < (header[0] - vector_produk[it].getID().length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        // namaProduk
+        cout << "| ";
+        cout << vector_produk[it].getNamaProduk();
+        for (space = 0; space < (header[1] - vector_produk[it].getNamaProduk().length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        // Harga
+        cout << "| ";
+        cout << vector_produk[it].getHargaProduk();
+        panjang = to_string(vector_produk[it].getHargaProduk());
+        for (space = 0; space < (header[2] - panjang.length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        // Stok
+        cout << "| ";
+        cout << vector_produk[it].getStokProduk();
+        panjang = to_string(vector_produk[it].getStokProduk());
+        for (space = 0; space < (header[3] - panjang.length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        // Jenis
+        cout << "| ";
+        cout << vector_produk[it].getJenis();
+        for (space = 0; space < (header[4] - vector_produk[it].getJenis().length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        // Bahan
+        cout << "| ";
+        cout << vector_produk[it].getBahan();
+        for (space = 0; space < (header[5] - vector_produk[it].getBahan().length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        // Warna
+        cout << "| ";
+        cout << vector_produk[it].getWarna();
+        for (space = 0; space < (header[6] - vector_produk[it].getWarna().length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        // Kategori
+        cout << "| ";
+        cout << vector_produk[it].getKategori();
+        for (space = 0; space < (header[7] - vector_produk[it].getKategori().length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        // Size
+        cout << "| ";
+        cout << vector_produk[it].getSize();
+        for (space = 0; space < (header[8] - vector_produk[it].getSize().length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        // Merk
+        cout << "| ";
+        cout << vector_produk[it].getMerk();
+        for (space = 0; space < (header[9] - vector_produk[it].getMerk().length()); space++) {
+            cout << " ";
+        }
+        cout << ' ';
+        cout << " |" << endl;
+    }
+
+    // Membuat garis tabel
+    for (int space = 0; space < sum + 26; space++) {
         cout << '-';
     }
     cout << endl;

@@ -1,4 +1,3 @@
-#include <cstdio>
 #include <string>
 
 using namespace std;
@@ -38,7 +37,7 @@ class PetShop {
     }
 
     void setStokProduk(int inputStokProduk) {
-        this->namaProduk = inputStokProduk;
+        this->stokProduk = inputStokProduk;
     }
 
     int getStokProduk() {

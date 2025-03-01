@@ -10,9 +10,6 @@ class Baju : public Aksesoris {
   public:
     Baju() {}
 
-    Baju(string inputID, string inputNamaProduk, int inputHargaProduk, int inputStokProduk, string inputJenis, string inputBahan, string inputWarna, string inputKategori, string inputSize, string inputMerk) {
-    }
-
     void setKategori(string inputKategori) {
         this->kategori = inputKategori;
     }
