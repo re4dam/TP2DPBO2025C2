@@ -4,7 +4,7 @@ Saya Zaki Adam dengan NIM 2304934 mengerjakan Tugas Praktikum 2 dalam mata kulia
 ## Desain Program
 Program terdiri dari 3 kelas yaitu, PetShop, Aksesoris, dan Baju.
 Class PetShop terdiri dari atribut:
-* ID
+* ID -> ID dari produk
 * Nama
 * Harga
 * Stok
