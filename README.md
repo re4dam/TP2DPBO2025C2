@@ -3,6 +3,7 @@ Saya Zaki Adam dengan NIM 2304934 mengerjakan Tugas Praktikum 2 dalam mata kulia
 
 ## Desain Program
 ![image](TP2-diagram.png)
+
 Program terdiri dari 3 kelas yaitu, PetShop, Aksesoris, dan Baju.
 
 ### PetShop
