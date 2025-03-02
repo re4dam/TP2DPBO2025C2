@@ -1,9 +1,11 @@
 from Baju import Baju
 
 
+# List/Array of objects bertipe Baju nantinya
 produk = []
 
 # Creating initial inventory items
+# data pertama
 temporary = Baju()
 temporary.set_ID("1")
 temporary.set_nama("Baju_Anjing_Polos")
@@ -17,6 +19,7 @@ temporary.set_size("M")
 temporary.set_merk("PetCo")
 produk.append(temporary)
 
+# data kedua
 temporary = Baju()
 temporary.set_ID("2")
 temporary.set_nama("Baju_Kucing_Motif")
@@ -30,6 +33,7 @@ temporary.set_size("S")
 temporary.set_merk("MeowStyle")
 produk.append(temporary)
 
+# data ketiga
 temporary = Baju()
 temporary.set_ID("3")
 temporary.set_nama("Jaket_Anjing_Waterproof")
@@ -43,6 +47,7 @@ temporary.set_size("L")
 temporary.set_merk("PetGear")
 produk.append(temporary)
 
+# data keempat
 temporary = Baju()
 temporary.set_ID("4")
 temporary.set_nama("Kaos_Kucing_Nyaman")
@@ -56,6 +61,7 @@ temporary.set_size("M")
 temporary.set_merk("PawFashion")
 produk.append(temporary)
 
+# data kelima
 temporary = Baju()
 temporary.set_ID("5")
 temporary.set_nama("Sweater_Anjing_Hangat")
@@ -92,6 +98,7 @@ try:
         Size = input()
         Merk = input()
 
+        # create object by the inputs
         temporary = Baju()
         temporary.set_ID(ID)
         temporary.set_nama(namaProduk)
@@ -103,7 +110,7 @@ try:
         temporary.set_kategori(Kategori)
         temporary.set_size(Size)
         temporary.set_merk(Merk)
-        produk.append(temporary)
+        produk.append(temporary)  # append the object into Array
 except ValueError:
     print("Input tidak valid. Masukkan angka untuk harga dan stok.")
 

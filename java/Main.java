@@ -79,27 +79,33 @@ public class Main {
         int num = scanner.nextInt();
 
         for (int i = 0; i < num; i++) {
+            // buat object terlebih dahulu
             temporary = new Baju();
 
+            // insert ID
             System.out.print("Masukkan ID: ");
             ID = scanner.next();
 
+            // insert Nama, Harga, dan Stok
             System.out.println("Masukkan Nama, Harga, dan Stok (secara berurut):");
             System.out.println("Untuk nama produk tidak menerima spasi");
             namaProduk = scanner.next();
             harga = scanner.nextInt();
             stok = scanner.nextInt();
 
+            // insert jenis, Bahan, dan warna
             System.out.println("Masukkan Jenis, Bahan, dan Warna (secara berurut):");
             jenis = scanner.next();
             bahan = scanner.next();
             warna = scanner.next();
 
+            // insert kategori, size, dan merk
             System.out.println("Masukkan Kategori, Size, dan Merk (secara berurut):");
             kategori = scanner.next();
             size = scanner.next();
             merk = scanner.next();
 
+            // set each attribute of object by the inputs
             temporary.setID(ID);
             temporary.setNama(namaProduk);
             temporary.setHarga(harga);

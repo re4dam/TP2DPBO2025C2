@@ -1,15 +1,17 @@
 #include "Baju.cpp"
 #include <iostream>
-#include <ostream>
 #include <string>
 #include <vector>
 
 int main() {
+    // Array of object
     vector<Baju> vector_produk;
-    Baju temporary;
+    Baju temporary; // temporary object for input
+    // temporary variable for each attributes of baju
     string ID, namaProduk, Jenis, Bahan, Warna, Kategori, Size, Merk;
     int harga, stok;
 
+    // create first hardcode object
     temporary.setID("1");
     temporary.setNamaProduk("Baju_Anjing_Polos");
     temporary.setHargaProduk(50000);
@@ -22,6 +24,7 @@ int main() {
     temporary.setMerk("PetCo");
     vector_produk.push_back(temporary);
 
+    // create second hardcode object
     temporary.setID("2");
     temporary.setNamaProduk("Baju_Kucing_Motif");
     temporary.setHargaProduk(60000);
@@ -34,6 +37,7 @@ int main() {
     temporary.setMerk("MeowStyle");
     vector_produk.push_back(temporary);
 
+    // create third hardcode object
     temporary.setID("3");
     temporary.setNamaProduk("Jaket_Anjing_Waterproof");
     temporary.setHargaProduk(120000);
@@ -46,6 +50,7 @@ int main() {
     temporary.setMerk("PetGear");
     vector_produk.push_back(temporary);
 
+    // create fourth hardcode object
     temporary.setID("4");
     temporary.setNamaProduk("Kaos_Kucing_Nyaman");
     temporary.setHargaProduk(45000);
@@ -58,6 +63,7 @@ int main() {
     temporary.setMerk("PawFashion");
     vector_produk.push_back(temporary);
 
+    // create fifth hardcode object
     temporary.setID("5");
     temporary.setNamaProduk("Sweater_Anjing_Hangat");
     temporary.setHargaProduk(90000);
@@ -70,25 +76,32 @@ int main() {
     temporary.setMerk("DoggyWear");
     vector_produk.push_back(temporary);
 
+    // insert jumlah data baru
     int it;
     int num;
     cout << "Masukkan jumlah data baru: ";
     cin >> num;
 
+    // lakukan insert data baru sejumlah num
     for (it = 0; it < num; it++) {
+        // masukkan id terlebih dahulu
         cout << "Masukkan ID: ";
         cin >> ID;
 
+        // masukkan nama, harga, dan stok
         cout << "Masukkan Nama, Harga, dan Stok (secara berurut):" << endl;
         cout << "Untuk nama produk tidak menerima spasi" << endl;
         cin >> namaProduk >> harga >> stok;
 
+        // masukkan jenis, bahan, dan warna
         cout << "Masukkan Jenis, Bahan, dan Warna (secara berurut):" << endl;
         cin >> Jenis >> Bahan >> Warna;
 
+        // masukkan kategori, size, dan merk
         cout << "Masukkan Kategori, Size, dan Merk (secara berurut):" << endl;
         cin >> Kategori >> Size >> Merk;
 
+        // insert inputs into object's attributes
         temporary.setID(ID);
         temporary.setNamaProduk(namaProduk);
         temporary.setHargaProduk(harga);
